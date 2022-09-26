@@ -1,0 +1,12 @@
+// Заголовки, общие БЄМ блоки и проче...
+._md3dn {
+  @media (max-width:$mobile){
+    display: none;
+  }
+}
+
+._mmd3dn {
+  @media (min-width:$mobile){
+    display: none;
+  }
+}
