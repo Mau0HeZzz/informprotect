@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Компания"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page_company">
+        <section class="blue-block" style="background-image: url(@img/blue_bg.png);">
+          <div class="blue-block__wrapper">
+            <div class="blue-block__container">
+              <div class="blue-block__head">
+                <h1>КОМПАНИЯ</h1>
+              </div>
+              <div class="blue-block__body">
+                <p>В настоящее время компания является системным интегратором широкого профиля,
+                  оказывающим полный спектр услуг в области информационной безопасности на всей
+                  территории России.</p>
+                <p>
+                  Наша компания располагает штатом высокопрофессиональных специалистов и
+                  ресурсными возможностями для реализации всего комплекса работ по созданию
+                  систем защиты информации в оптимальные сроки или выполнения отдельных видов
+                  услуг с наиболее эффективным и экономичным для Заказчика результатом.
+                </p>
+              </div>
+              <div class="blue-block__advantages advantages-blueBlock">
+                <div class="advantages-blueBlock__item">
+                  <p>12<span>ЛЕТ</span></p>
+                  <span>НА РЫНКЕ</span>
+                </div>
+                <div class="advantages-blueBlock__item">
+                  <p>>150</p>
+                  <span>РЕАЛИЗОВАННЫХ <br>
+                    ПРОЕКТОВ</span>
+                </div>
+                <div class="advantages-blueBlock__item">
+                  <p>>45</p>
+                  <span>ПАРТНЕРОВ</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="licenses">
+          <div class="licenses__container">
+            <div class="licenses__head">
+              <h2>ЛИЦЕНЗИИ <br>
+                И&nbsp;СЕРТИФИКАТЫ</h2>
+            </div>
+            <div class="licenses__body" data-gallery>
+              <div class="licenses__item item-licenses">
+                <a data-gallery-link href="@img/licenses_1.png" class="item-licenses__image"><img src="@img/licenses_1.png" alt="license"></a>
+                <div class="item-licenses__body">
+                  <h4>Лицензия ФСТЭК России № 3950 от 13 августа 2021 года</h4>
+                  <p>на деятельность по технической защите конфиденциальной информации. Ссылка на выписку: <a href="https://reestr.fstec.ru/index.php/regview1?guid=f0962030-984b-487d-b328-97d424ebcef5" target="_blank">https://reestr.fstec.ru/index.php/regview1?guid=f0962030-984b-487d-b328-97d424ebcef5</a></p>
+                </div>
+              </div>
+              <div class="licenses__item item-licenses">
+                <a data-gallery-link href="@img/licenses_2.png" class="item-licenses__image"><img src="@img/licenses_2.png" alt="license"></a>
+                <div class="item-licenses__body">
+                  <h4>Лицензия ФСБ России № 02/1843/Н от 22 июня 2021 года</h4>
+                  <p>на разработку, производство, распространение шифровальных (криптографических) средств, информационных систем и телекоммуникационных систем, защищенных с использованием шифровальных (криптографических) средств, выполнение работ, оказание услуг в области шифрования информации, техническое обслуживание шифровальных (криптографических) средств, информационных систем и телекоммуникационных систем, защищенных с использованием шифровальных (криптографических) средств. Срок действия лицензии – бессрочно.</p>
+                </div>
+              </div>
+              <div class="licenses__item item-licenses">
+                <a data-gallery-link href="@img/licenses_3.png" class="item-licenses__image"><img src="@img/licenses_3.png" alt="license"></a>
+                <div class="item-licenses__body">
+                  <h4>Сертификат соответствия требованиям по информационной безопасности ГОСТ Р ИСО/МЭК 27001-2021 №НР.РФ.001.СИБ00060</h4>
+                </div>
+              </div>
+              <div class="licenses__item item-licenses">
+                <a data-gallery-link href="@img/licenses_4.png" class="item-licenses__image"><img src="@img/licenses_4.png" alt="license"></a>
+                <div class="item-licenses__body">
+                  <h4>Сертификат соответствия требованиям ГОСТ Р ИСО 9001-2015 № НР.РФ.001.СМК01610</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        @@include('html/_partners.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

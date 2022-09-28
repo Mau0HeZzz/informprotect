@@ -1,3 +1,189 @@
 //====================================================================================================
+.hero {
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh - rem(58));
+  display: flex;
+  background-color: #45A4DC;
+
+  &__wrapper {
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 60%);
+    flex: 1 1 auto;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    gap: rem(8);
+  }
+
+  &__title {
+    font-weight: 700;
+    color: #093494;
+    @include adaptiveValue("font-size", 48, 25, 1920, 320, 1);
+    text-transform: uppercase;
+  }
+
+  &__description {
+    @include adaptiveValue("font-size", 32, 16, 1920, 320, 1);
+  }
+
+  &__link {
+    margin-top: rem(20);
+  }
+}
 
 //====================================================================================================
+
+.partners {
+  background: linear-gradient(180deg, #093494 0%, #6304AE 100%);
+  color: #fff;
+  @include adaptiveValue("padding-top", 100, 20, 1920, 480, 1);
+  @include adaptiveValue("padding-bottom", 100, 20, 1920, 480, 1);
+
+  &__container {
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    @include adaptiveValue("font-size", 48, 25, 1920, 480, 1);
+    span {
+      @include adaptiveValue("font-size", 32, 16, 1920, 480, 1);
+    }
+    &:not(:last-child) {margin-bottom: rem(21);}
+  }
+
+  &__body {
+    @include adaptiveValue("padding-left", 110, 0);
+    @include adaptiveValue("padding-right", 110, 0);
+    position: relative;
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 100, 20, 1920, 480, 1);
+    } 
+  }
+
+  &__slider {
+  }
+
+  &__wrapper {
+  }
+
+  &__slide {
+    display: flex;
+    justify-content:center;align-items: center;
+  }
+
+  &__navigation {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+
+  &__arrow {
+    pointer-events: all;
+    cursor: pointer;
+    transition: opacity 0.3s ease 0s;
+    &.swiper-button-disabled {
+      opacity: 0.3;
+    }
+    &_prev {
+    }
+
+    &_next {
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__link {
+  }
+}
+
+//========================================================================================================================================================
+
+:root{
+  @include adaptiveValue("--cardsGridCols", 320, 280, 1920, 320, 1);
+  @include adaptiveValue("--cardsGridRows", 400, 350, 1920, 320, 1);
+}
+.cards {
+  @include adaptiveValue("padding-top", 50, 20, 1920, 480, 1);
+  @include adaptiveValue("padding-bottom", 50, 20, 1920, 480, 1);
+
+  &__container {
+  }
+
+  &__body {
+    display: grid;
+    gap: rem(20);
+    grid-template-columns: repeat(auto-fit, var(--cardsGridCols));
+    grid-template-rows: repeat(auto-fit, var(--cardsGridRows));
+    justify-content: center;
+  }
+
+  &__card {
+  }
+}
+
+.card {
+  position: relative;
+  border-radius: rem(18);
+  overflow: hidden;
+  width: 100%;
+  height: var(--cardsGridRows);
+  display: flex;
+  color: #fff;
+  filter: brightness(1.5);
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &__body {
+    flex: 1 1 auto;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(9, 53, 148, 0.5);
+    background-blend-mode: screen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: rem(30) rem(25);
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: 700;
+    line-height: 1.2;
+    filter: brightness(0.7);
+  }
+
+  &__description {
+    line-height: 1.2;
+    &:not(:last-child) {margin-bottom: rem(17);}
+    filter: brightness(0.7);
+  }
+
+  &__link {
+    filter: brightness(0.7);
+  }
+}

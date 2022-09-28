@@ -6,11 +6,56 @@
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
-			<main class="page">
+			<main class="page page_home">
+        <section class="hero" style="background-image: url(@img/hero_bg.png);">
+          <div class="hero__wrapper">
+            <div class="hero__container">
+              <h1 class="hero__title">КОМПЛЕКСНЫЕ <br> ИБ-РЕШЕНИЯ</h1>
+              <p class="hero__description">ДЛЯ ВАШЕГО БИЗНЕСА</p>
+              <a href="#" class="hero__link blue_button" style="--color: #fff; --bgc: #45A4DC">ПОДРОБНЕЕ</a>
+            </div>
+          </div>
+        </section>
+        <section class="cards">
+          <div class="cards__container">
+            <div class="cards__body">
+              @@include('html/_card.htm',{
+                "image":"cards_1.png",
+                "title":"Защита персональных данных",
+                "description":""
+              })
+              @@include('html/_card.htm',{
+                "image":"cards_2.png",
+                "title":"Защита коммерческой тайны",
+                "description":""
+              })
+              @@include('html/_card.htm',{
+                "image":"cards_3.png",
+                "title":"Консалтинг в области информационной безопасности",
+                "description":""
+              })
+              @@include('html/_card.htm',{
+                "image":"cards_4.png",
+                "title":"Защита объектов",
+                "description":"критической информационной инфраструктуры"
+              })
+              @@include('html/_card.htm',{
+                "image":"cards_5.png",
+                "title":"Поставка и внедрение средств защиты информации, ",
+                "description":"в том числе криптографических"
+              })
+              @@include('html/_card.htm',{
+                "image":"cards_6.png",
+                "title":"Разработка паспортов безопасности",
+                "description":"объектов топливно -энергетического комплекса РФ"
+              })
+            </div>
+          </div>
+        </section>
+        @@include('html/_partners.htm',{})
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		@@include('html/_popup.htm',{})
 		@@include('html/_js.htm',{})
 	</body>
 </html>

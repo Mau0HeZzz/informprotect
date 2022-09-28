@@ -1,12 +1,65 @@
 // Заголовки, общие БЄМ блоки и проче...
 ._md3dn {
   @media (max-width:$mobile){
-    display: none;
+    display: none !important;
   }
 }
 
 ._mmd3dn {
   @media (min-width:$mobile){
+    display: none !important;
+  }
+}
+
+._md2dn {
+  @media (max-width:$tablet){
+    display: none !important;
+  }
+}
+._mmd2dn {
+  @media (min-width:$tablet){
     display: none;
+  }
+}
+
+.blue_button {
+  color: $lightBlue;
+  text-transform: uppercase;
+  font-weight: 700;
+  min-width: rem(170);
+  padding: rem(11);
+  border-radius: rem(50);
+  border: 1px solid #45A4DC;
+  transition: all 0.3s ease 0s;
+  text-align: center;
+  display: inline-block;
+  @media (any-hover: hover){
+    &:hover{
+      color: var(--color);
+      background-color: var(--bgc);
+    }
+  }
+  &_white {
+    border-color: #fff;
+    color: #fff;
+  }
+}
+
+.lg-backdrop {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.page_home {
+  @media (min-width:$mobile){
+    padding-top: rem(59);
+  }
+}
+
+.page_company {
+  @media (min-width:$mobile){
+    padding-top: rem(181);
+  }
+  @media (max-width:$mobile){
+    padding-top: rem(87);
   }
 }

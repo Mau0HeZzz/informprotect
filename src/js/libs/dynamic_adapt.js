@@ -15,7 +15,6 @@ DynamicAdapt.prototype.init = function () {
 	this.daClassname = "_dynamic_adapt_";
 	this.dynamicAllParents = document.querySelectorAll('[data-da-parent]').length ? document.querySelectorAll('[data-da-parent]') : document.querySelectorAll('body');
 	let dynamicAllParents = this.dynamicAllParents;
-	console.log(this.dynamicAllParents)
 	// массив DOM-элементов
 	for (let i = 0; i < dynamicAllParents.length; i++) {
 		this.dynamicAllParent = dynamicAllParents[i];

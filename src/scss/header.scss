@@ -1,12 +1,282 @@
 //====================================================================================================
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+
+  &__container {
+  }
+
+  &__top {
+  }
+
+  &__main {
+  }
+}
+.top-header {
+  background-color: #fff;
+
+  &__container {
+    padding-top: rem(8);
+    padding-bottom: rem(8);
+    display: flex;
+    justify-content: end;
+    @include adaptiveValue("gap", 30, 10, 1920, 767, 1);
+    transition: all 0.3s ease 0s;
+    ._header-scroll & {
+      transform: translateY(-100%);
+      overflow: hidden;
+      padding: 0;
+      max-height: 0;
+    }
+    @media (max-width:$tablet){
+      flex-direction: column;
+      gap: rem(10);
+    }
+  }
+
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: rem(15);
+    transition: all 0.3s ease 0s;
+    @media (min-width:$tablet){
+      font-size: rem(12);
+    }
+    @media (max-width:$tablet){
+      &_first {
+        margin-top: auto;
+      }
+    }
+    @media (any-hover: hover){
+      &:hover{
+        color: $lightBlue;
+      }
+    }
+  }
+
+  &__icon {
+    flex: 0 0 rem(30);
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+
+    &_bold {
+      font-size: rem(16);
+      font-weight: 600;
+    }
+  }
+
+  &__callback {
+  }
+}
+.main-header {
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease 0s;
+  ._header-scroll & {
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  &__container {
+    @include adaptiveValue("padding-top", 26, 8, 1920, 992, 1);
+    @include adaptiveValue("padding-bottom", 26, 8, 1920, 992, 1);
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("gap", 50, 15, 1920, 767, 1);
+    @media (max-width:$tablet){
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+  }
+
+  &__menu {
+  }
+}
+.menu {
+  @media (min-width:$tablet){
+    flex: 1 1 auto;
+  }
+
+  &__icon {
+  }
+
+  &__body {
+    transition: all 0.3s ease 0s;
+    @media (max-width:$tablet){
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - rem(37));
+      overflow: auto;
+      gap: rem(30);
+      padding: rem(30) rem(15);
+      transform: translateX(-150%);
+      .menu-open & {
+        transform: none;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: rem(30);
+    @media (max-width:$tablet){
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  &__item {
+    @media (max-width:$tablet){
+      border-bottom: 1px solid #000;
+    }
+  }
+
+  &__spollers {
+  }
+
+  &__link {
+    font-size: rem(15);
+    font-weight: 600;
+    transition: color 0.3s ease 0s;
+    @media (max-width:$tablet){
+      display: block;
+      padding: rem(10);
+    }
+    @media (any-hover: hover){
+      &:hover{
+        color: #45A4DC;
+      }
+    }
+  }
+}
+.spollers-menu {
+  position: relative;
+
+  &__title {
+    font-size: rem(15);
+    font-weight: 600;
+    transition: color 0.3s ease 0s;
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    &::after{
+      content:'';
+      width: rem(8);
+      height: rem(8);
+      flex: 0 0 rem(8);
+      border-bottom: rem(2) solid #45A4DC;
+      border-right: rem(2) solid #45A4DC;
+      transform: rotate(45deg);
+      transition: all 0.3s ease 0s;
+    }
+    &._spoller-active{
+      color: #45A4DC;
+    }
+    &._spoller-active::after{
+      transform: rotate(-135deg);
+    }
+    @media (any-hover: hover){
+      &:hover{
+        color: #45A4DC;
+      }
+    }
+    @media (min-width:$tablet){
+      @media (any-hover: hover){
+        &:hover{
+          &::after{
+            transform: rotate(-135deg);
+          }
+          &+.spollers-menu__body {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+    @media (max-width:$tablet){
+      padding: rem(10);
+    }
+  }
+
+  &__body {
+    @media (min-width:$tablet){
+      position: absolute;
+      left: 0;
+      top: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease 0s;
+      max-width: 100vw;
+      width: rem(320);
+      padding: rem(12);
+      box-shadow: 0.25rem 0.25rem 0.5rem 0 rgb(34 60 80 / 20%);
+      background-color: #fff;
+      border-radius: rem(8);
+      @media (any-hover: hover){
+        &:hover{
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &__list {
+  }
+
+  &__item {
+    padding: rem(5) 0;
+    @media (max-width:$tablet){
+      padding: rem(10) rem(25);
+    }
+  }
+
+  &__link {
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover){
+      &:hover{
+        color: $lightBlue;
+      }
+    }
+  }
+}
+
+
+.logo-header {
+  
+  @media (any-hover: hover){
+    &:hover{
+      .logo-header__lightblue {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__lightblue {
+    transition: transform 1s ease 0s;
+    transform-origin: 27px 33.5px;
+  }
+}
+
 
 //====================================================================================================
 
 //Burger
-/*
 .icon-menu {
 	display: none;
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		display: block;
 		position: relative;
 		width: rem(30);
@@ -51,4 +321,3 @@
 		}
 	}
 }
-*/
