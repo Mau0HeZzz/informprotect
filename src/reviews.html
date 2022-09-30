@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"ОТЗЫВЫ КЛИЕНТОВ"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page_company">
+        <section class="blue-block" style="background-image: url(@img/blue_bg_4.png);">
+          <div class="blue-block__wrapper">
+            <div class="blue-block__container">
+              <div class="blue-block__head">
+                <div class="partners__head">
+                  <h1>ОТЗЫВЫ <br>
+                    КЛИЕНТОВ</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="textblock">
+          <div class="textblock__container">
+            <div class="textblock__content">
+              <p>Наша компания будет рада поделиться отзывами наших клиентов и даже предоставить их контактные данные, если данная информация будет Вам необходима.</p>
+            </div>
+          </div>
+        </section>
+        @@include('html/_partners.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

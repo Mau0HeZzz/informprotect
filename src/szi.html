@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"КАТАЛОГ СЗИ"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page_company">
+        <section class="cards">
+          <div class="cards__container">
+            <div class="cards__head">
+              <h1>КАТАЛОГ <br>
+                СЗИ</h1>
+            </div>
+            <div class="cards__body">
+              @@include('html/_card.htm',{
+                "image":"szi_1.png",
+                "title":"Средства <br> криптографической <br> защиты информации",
+                "description":""
+              })
+              @@include('html/_card.htm',{
+                "image":"szi_2.png",
+                "title":"Сетевая <br> безопасность",
+                "description":""
+              })
+              @@include('html/_card.htm',{
+                "image":"szi_3.png",
+                "title":"Средства <br> анализа защищенности",
+                "description":""
+              })
+              @@include('html/_card.htm',{
+                "image":"szi_4.png",
+                "title":"Средства защиты <br> рабочих станций <br> и серверов",
+                "description":""
+              })
+              @@include('html/_card.htm',{
+                "image":"szi_5.png",
+                "title":"Защита средств <br> виртуализации",
+                "description":""
+              })
+              @@include('html/_card.htm',{
+                "image":"szi_6.png",
+                "title":"Автоматизация <br> процессов по защите <br> информации",
+                "description":""
+              })
+              @@include('html/_card.htm',{
+                "image":"szi_7.png",
+                "title":"DLP-системы",
+                "description":""
+              })
+              @@include('html/_card.htm',{
+                "image":"szi_8.png",
+                "title":"Защита <br> веб-приложений",
+                "description":""
+              })
+            </div>
+          </div>
+        </section>
+        @@include('html/_partners.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

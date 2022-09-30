@@ -53,6 +53,7 @@
     font-weight: 700;
     @include adaptiveValue("font-size", 48, 25, 1920, 480, 1);
     span {
+      font-weight: 300;
       @include adaptiveValue("font-size", 32, 16, 1920, 480, 1);
     }
     &:not(:last-child) {margin-bottom: rem(21);}
@@ -124,6 +125,14 @@
   @include adaptiveValue("padding-bottom", 50, 20, 1920, 480, 1);
 
   &__container {
+  }
+
+  &__head {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 48, 32, 1920, 480, 1);
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 100, 40, 1920, 480, 1);
+    }
   }
 
   &__body {

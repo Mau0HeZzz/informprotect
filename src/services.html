@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"УСЛУГИ И РЕШЕНИЯ"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page_company">
+        <section class="cards">
+          <div class="cards__container">
+            <div class="cards__head">
+              <h1>УСЛУГИ <br>
+                И РЕШЕНИЯ</h1>
+            </div>
+            <div class="cards__body">
+              @@include('html/_card.htm',{
+                "image":"cards_1.png",
+                "title":"Защита конфиденциальной информации",
+                "description":""
+              })
+              @@include('html/_card.htm',{
+                "image":"cards_3.png",
+                "title":"Консалтинг в области информационной безопасности",
+                "description":""
+              })
+              @@include('html/_card.htm',{
+                "image":"cards_4.png",
+                "title":"Защита объектов",
+                "description":"критической информационной инфраструктуры"
+              })
+              @@include('html/_card.htm',{
+                "image":"cards_6.png",
+                "title":"Разработка паспортов безопасности",
+                "description":"объектов топливно-энергетического комплекса РФ"
+              })
+              @@include('html/_card.htm',{
+                "image":"cards_7.png",
+                "title":"Тестирование на проникновение",
+                "description":"(пентест)"
+              })
+            </div>
+          </div>
+        </section>
+        @@include('html/_partners.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>
