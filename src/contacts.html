@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"КОНТАКТЫ"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page_company">
+        <div class="page__container">
+          <h1 class="page__title">КОНТАКТЫ</h1>
+        </div>
+        <section class="contacts">
+          <div class="contacts__container">
+            <div class="contacts__content content-contacts">
+              <div class="content-contacts__head">
+                <h3>ИНФОРМЗАЩИТА</h3>
+              </div>
+              <div class="content-contacts__body">
+                <div class="content-contacts__row">
+                  <div class="content-contacts__icon">
+                    <img src="@img/icons/icon_adress.svg" alt="image">
+                  </div>
+                  <a href="#" class="content-contacts__link">
+                    Республика Башкортостан, <br>
+                    г.Уфа, Рихарда Зорге, д.17/4, 3 этаж
+                  </a>
+                </div>
+                <div class="content-contacts__row">
+                  <div class="content-contacts__icon">
+                    <img src="@img/icons/icon_phone.svg" alt="image">
+                  </div>
+                  <a href="#" class="content-contacts__link">
+                    <span>8-800-234-88-98</span>
+                  </a>
+                </div>
+                <div class="content-contacts__row">
+                  <div class="content-contacts__icon">
+                    <img src="@img/icons/icon_phone.svg" alt="image">
+                  </div>
+                  <a href="#" class="content-contacts__link">
+                    +7 (347) <span>225-98-01</span>
+                  </a>
+                </div>
+                <div class="content-contacts__row">
+                  <div class="content-contacts__icon">
+                    <img src="@img/icons/icon_email.svg" alt="image">
+                  </div>
+                  <a href="#" class="content-contacts__link">
+                    info@inform-zashita.ru
+                  </a>
+                </div>
+              </div>
+              <div class="content-contacts__footer">
+                <a href="#" class="content-contacts__icon">
+                  <img src="@img/icons/contacts_1.svg" alt="image">
+                </a>
+                <a href="#" class="content-contacts__icon">
+                  <img src="@img/icons/contacts_2.svg" alt="image">
+                </a>
+                <a href="#" class="content-contacts__icon">
+                  <img src="@img/icons/contacts_3.svg" alt="image">
+                </a>
+                <a href="#" class="content-contacts__icon">
+                  <img src="@img/icons/contacts_4.svg" alt="image">
+                </a>
+                <a href="#" class="content-contacts__icon">
+                  <img src="@img/icons/contacts_5.svg" alt="image">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div data-map data-center="54.753248, 55.983512" data-zoom="14" data-marker="54.753248, 55.983512" class="contacts__map"></div>
+        </section>
+        @@include('html/_partners.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

@@ -63,3 +63,13 @@
     padding-top: rem(87);
   }
 }
+
+.page__container {
+  @include adaptiveValue("padding-top", 90, 20, 1920, 480, 1);
+  @include adaptiveValue("padding-bottom", 45, 20, 1920, 480, 1);
+}
+
+.page__title {
+  font-weight: 700;
+  @include adaptiveValue("font-size", 48, 32, 1920, 480, 1);
+}

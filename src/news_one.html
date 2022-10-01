@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"НОВОСТЬ"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page_company">
+        <section class="news news_one">
+          <div class="news__container">
+            <div class="body-news__item">
+              <a href="#" class="body-news__image">
+                <img src="@img/news_1.png" alt="image">
+              </a>
+              <div class="body-news__content">
+                <div class="body-news__date">5 сентября 2022</div>
+                <p>Специалист нашей компании примет участие в итоговой государственной аттестации выпускников ФГБОУ ВО "Башкирский Государственный Университет" направления подготовки 10.03.01 «Информационная безопасность» в 2023 году в качестве Председателя Государственной экзаменационной комиссии</p>
+                <p>Наша компания и ФГБОУ ВО "Башкирский Государственный Университет" на протяжении нескольких лет взаимовыгодно и плодотворно сотрудничаем в подготовке квалифицированных специалистов с сфере информационной безопасности.</p>
+                <a href="#" class="body-news__link blue_button" style="--color: #fff; --bgc: #45A4DC">НАЗАД</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        @@include('html/_partners.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

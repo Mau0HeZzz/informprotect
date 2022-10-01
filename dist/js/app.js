@@ -5875,6 +5875,24 @@ PERFORMANCE OF THIS SOFTWARE.
         };
         const da = new DynamicAdapt("max");
         da.init();
+        document.addEventListener("DOMContentLoaded", (function() {
+            if (ymaps) ymaps.ready(init);
+            function init() {
+                const maps = document.querySelectorAll("[data-map]");
+                if (maps.length) maps.forEach((map => {
+                    let center = map.dataset.center.replaceAll(" ", "").split(",");
+                    let marker = map.dataset.marker.replaceAll(" ", "").split(",");
+                    let zoom = map.dataset.zoom;
+                    let contacsMap = new ymaps.Map(map, {
+                        center,
+                        zoom
+                    }, {});
+                    let contactsPlacemark = new ymaps.Placemark(marker, {}, {});
+                    contacsMap.geoObjects.add(contactsPlacemark);
+                    contacsMap.behaviors.disable("scrollZoom");
+                }));
+            }
+        }));
         window["FLS"] = true;
         isWebp();
         menuInit();
